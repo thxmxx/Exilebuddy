@@ -1,0 +1,14 @@
+﻿Forum Thread: https://www.thebuddyforum.com/threads/exilebuddy-release-thread-3-3.419393/
+
+*********************************************************************************************************
+* IMPORTANT: https://www.thebuddyforum.com/threads/6-28-2018-bans-unschedule-extended-downtime.420020/
+*********************************************************************************************************
+
+[Current]
+
+* Please read the ban thread above before using this version.
+* Updates for 3.3.1.2
+* Updates for 3.3.1.1
+* ObjectMagicPropertiesComponent.ExplicitStatsEnumerable/ImplicitStatsEnumerable are now internal, use ExplicitStats/ImplicitStats instead (which now cache per-frame to improve performance).
+* GetStatFromCache now reloads its cache like the other Dat functions do. This was removed in the past to avoid a big frame stall, but by doing it again, it improves regular runtime performance.
+* Few optimizations in CombatAreaCache to cut down on API use to improve performance.

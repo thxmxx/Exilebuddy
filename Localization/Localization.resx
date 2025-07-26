@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuthError" xml:space="preserve">
+    <value>AuthError</value>
+    <comment>The message to show users when there's an error authing their key.</comment>
+  </data>
+  <data name="AuthLogin" xml:space="preserve">
+    <value>AuthLogin</value>
+    <comment>The "Login" button for the LoginWindow.</comment>
+  </data>
+  <data name="AuthLoginErrorEmpty" xml:space="preserve">
+    <value>AuthLoginErrorEmpty</value>
+    <comment>The error shown when the auth key is empty.</comment>
+  </data>
+  <data name="AuthLoginInstructions" xml:space="preserve">
+    <value>AuthLoginInstructions</value>
+    <comment>The instructions for logging in with BuddyAuth.</comment>
+  </data>
+  <data name="AutoSelectConfig" xml:space="preserve">
+    <value>AutoSelectConfig</value>
+    <comment>The option to auto-select the config at startup.</comment>
+  </data>
+  <data name="AutoSelectLanguage" xml:space="preserve">
+    <value>AutoSelectLanguage</value>
+    <comment>The option to auto-select the language at startup.</comment>
+  </data>
+  <data name="Bot" xml:space="preserve">
+    <value>Bot</value>
+    <comment>The text "Bot"</comment>
+  </data>
+  <data name="BuddyUpdaterError" xml:space="preserve">
+    <value>BuddyUpdaterError</value>
+    <comment>The error shown when the Buddyupdater fails to run.</comment>
+  </data>
+  <data name="ChooseConfig" xml:space="preserve">
+    <value>ChooseConfig</value>
+    <comment>The "Choose" button for ConfigSelection.</comment>
+  </data>
+  <data name="ChooseConfigErrorEmpty" xml:space="preserve">
+    <value>ChooseConfigErrorEmpty</value>
+    <comment>The error shown when the config is null or empty.</comment>
+  </data>
+  <data name="ChooseConfigErrorInvalid" xml:space="preserve">
+    <value>ChooseConfigErrorInvalid</value>
+    <comment>The error shown when the config is invalid.</comment>
+  </data>
+  <data name="ChooseLanguage" xml:space="preserve">
+    <value>ChooseLanguage</value>
+    <comment>The "Choose" button for LanguageSelection.</comment>
+  </data>
+  <data name="CmdSettings" xml:space="preserve">
+    <value>CmdSettings</value>
+    <comment>The text for the "settings" command button.</comment>
+  </data>
+  <data name="CmdSupport" xml:space="preserve">
+    <value>CmdSupport</value>
+    <comment>The text for the "support" command button.</comment>
+  </data>
+  <data name="CmdTools" xml:space="preserve">
+    <value>CmdTools</value>
+    <comment>The text for the "tools" command button.</comment>
+  </data>
+  <data name="ConfigInstructions" xml:space="preserve">
+    <value>ConfigInstructions</value>
+    <comment>The instructions for choosing a configuration.</comment>
+  </data>
+  <data name="ConfigNoBotGui" xml:space="preserve">
+    <value>ConfigNoBotGui</value>
+    <comment>The text for when a bot does not have a GUI to configure.</comment>
+  </data>
+  <data name="ConfigNoPluginGui" xml:space="preserve">
+    <value>ConfigNoPluginGui</value>
+    <comment>The text for when a plugin does not have a GUI to configure.</comment>
+  </data>
+  <data name="ConfigNoRoutineGui" xml:space="preserve">
+    <value>ConfigNoRoutineGui</value>
+    <comment>The text for when a routine does not have a GUI to configure.</comment>
+  </data>
+  <data name="DownloadInstructions" xml:space="preserve">
+    <value>DownloadInstructions</value>
+    <comment>The instructions for when Buddyupdater is being downloaded.</comment>
+  </data>
+  <data name="GuideLink" xml:space="preserve">
+    <value>GuideLink</value>
+    <comment>A link to the current user guide.</comment>
+  </data>
+  <data name="GuideText" xml:space="preserve">
+    <value>GuideText</value>
+    <comment>The instructions to show users before using the program.</comment>
+  </data>
+  <data name="LanguageInstructions" xml:space="preserve">
+    <value>LanguageInstructions</value>
+    <comment>The instructions for choosing a language.</comment>
+  </data>
+  <data name="LogClear" xml:space="preserve">
+    <value>LogClear</value>
+    <comment>The text of the "Clear" button, for clearing the current log.</comment>
+  </data>
+  <data name="LogCopy" xml:space="preserve">
+    <value>LogCopy</value>
+    <comment>The text of the "Copy" button, for copying the current log filename to the clipboard.</comment>
+  </data>
+  <data name="LogFileNameCopied" xml:space="preserve">
+    <value>LogFileNameCopied</value>
+    <comment>The message to show users when the log file name was copied to the clipboard.</comment>
+  </data>
+  <data name="LogFileZipFail" xml:space="preserve">
+    <value>LogFileZipFail</value>
+    <comment>The message to show users when the log file fails to be zipped.</comment>
+  </data>
+  <data name="LogFileZipSuccess" xml:space="preserve">
+    <value>LogFileZipSuccess</value>
+    <comment>The message to show users when the log file is zipped and the file name is copied to the clipboard.</comment>
+  </data>
+  <data name="LogZip" xml:space="preserve">
+    <value>LogZip</value>
+    <comment>The text of the "Zip" button, for zipping the current log.</comment>
+  </data>
+  <data name="PluginAuthor" xml:space="preserve">
+    <value>PluginAuthor</value>
+    <comment>The text of the "Author" field for plugins.</comment>
+  </data>
+  <data name="PluginConfig" xml:space="preserve">
+    <value>PluginConfig</value>
+    <comment>Tbe text of the "Config" button for plugins.</comment>
+  </data>
+  <data name="PluginDescription" xml:space="preserve">
+    <value>PluginDescription</value>
+    <comment>The text of the "Description" field for plugins.</comment>
+  </data>
+  <data name="PluginEnable" xml:space="preserve">
+    <value>PluginEnable</value>
+    <comment>The text of the "Enable" checkbox for plugins.</comment>
+  </data>
+  <data name="PluginsGlobal" xml:space="preserve">
+    <value>PluginsGlobal</value>
+    <comment>The text of the "Plugins" settings tab.</comment>
+  </data>
+  <data name="PluginVersion" xml:space="preserve">
+    <value>PluginVersion</value>
+    <comment>The text of the "Version" field for plugins.</comment>
+  </data>
+  <data name="Routine" xml:space="preserve">
+    <value>Routine</value>
+    <comment>The text "Routine"</comment>
+  </data>
+  <data name="SelectProcess" xml:space="preserve">
+    <value>SelectProcess</value>
+    <comment>The instructions for choosing a process to attach to.</comment>
+  </data>
+  <data name="SelectProcessActivate" xml:space="preserve">
+    <value>SelectProcessActivate</value>
+    <comment>The text of the "Activate" button on the process selector window.</comment>
+  </data>
+  <data name="SelectProcessChoose" xml:space="preserve">
+    <value>SelectProcessChoose</value>
+    <comment>The text of the "Select" button on the process selector window.</comment>
+  </data>
+  <data name="SelectProcessRefresh" xml:space="preserve">
+    <value>SelectProcessRefresh</value>
+    <comment>The text of the "Refresh" button on the process selector window.</comment>
+  </data>
+  <data name="SettingsConfiguration" xml:space="preserve">
+    <value>SettingsConfiguration</value>
+    <comment>The text of the "Configuration" settings tab.</comment>
+  </data>
+  <data name="SettingsGlobal" xml:space="preserve">
+    <value>SettingsGlobal</value>
+    <comment>The text of the "Global" settings tab.</comment>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Start</value>
+    <comment>The text of "Start" button</comment>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Stop</value>
+    <comment>The text of "Stop" button</comment>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+    <comment>The name of the project.</comment>
+  </data>
+  <data name="UpdateInfo" xml:space="preserve">
+    <value>UpdateInfo</value>
+    <comment>The message shown when an update is available.</comment>
+  </data>
+  <data name="UpdateNewInstallation" xml:space="preserve">
+    <value>UpdateNewInstallation</value>
+    <comment>The message shown when a new installation is required.</comment>
+  </data>
+  <data name="UpdateNo" xml:space="preserve">
+    <value>UpdateNo</value>
+    <comment>The text of the "No" button for when an update is available.</comment>
+  </data>
+  <data name="UpdateYes" xml:space="preserve">
+    <value>UpdateYes</value>
+    <comment>The text of the "Yes" button for when an update is available.</comment>
+  </data>
+  <data name="VersionUnsupported" xml:space="preserve">
+    <value>VersionUnsupported</value>
+    <comment>The message to show users when the client version is unsupported.</comment>
+  </data>
+  <data name="ContentOrder" xml:space="preserve">
+    <value>ContentOrder</value>
+    <comment>The text for the order of content to load.</comment>
+  </data>
+  <data name="AllowExternalAccess" xml:space="preserve">
+    <value>AllowExternalAccess</value>
+    <comment>The text to show for this setting.</comment>
+  </data>
+  <data name="ForceStopBot" xml:space="preserve">
+    <value>ForceStopBot</value>
+    <comment>The message to show users to confirm they want to force stop the bot.</comment>
+  </data>
+  <data name="DebugLastTask" xml:space="preserve">
+    <value>DebugLastTask</value>
+    <comment>The text of the "Debug Last Task" setting.</comment>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="AutoLogin" xml:space="preserve">
+    <value>AutoLogin</value>
+  </data>
+  <data name="DisableAutoUpdate" xml:space="preserve">
+    <value>DisableAutoUpdate</value>
+  </data>
+  <data name="EnableOverlay" xml:space="preserve">
+    <value>EnableOverlay</value>
+    <comment>The text to show for the Enable Overlay option.</comment>
+  </data>
+  <data name="SettingsGui" xml:space="preserve">
+    <value>SettingsGui</value>
+    <comment>The text of the "Gui" settings tab.</comment>
+  </data>
+  <data name="NoHideOnMinimize" xml:space="preserve">
+    <value>NoHideOnMinimize</value>
+    <comment>The text shown for the NoHideOnMinimize setting.</comment>
+  </data>
+  <data name="UpdaterName" xml:space="preserve">
+    <value>UpdaterName</value>
+    <comment>The text of the Buddy Updater Name field.</comment>
+  </data>
+  <data name="DisabledContent" xml:space="preserve">
+    <value>DisabledContent</value>
+    <comment>The "Disabled Content" text.</comment>
+  </data>
+  <data name="ExitOnCompileErrors" xml:space="preserve">
+    <value>ExitOnCompileErrors</value>
+    <comment>The text of the exit on compile errors setting.</comment>
+  </data>
+  <data name="CompileAsynchronously" xml:space="preserve">
+    <value>CompileAsynchronously</value>
+    <comment>The text for the CompileAsynchronously option.</comment>
+  </data>
+  <data name="DontAutoFocusBotWindow" xml:space="preserve">
+    <value>DontAutoFocusBotWindow</value>
+  </data>
+  <data name="DontAutoFocusGameWindow" xml:space="preserve">
+    <value>DontAutoFocusGameWindow</value>
+  </data>
+  <data name="ExitOnLoadErrors" xml:space="preserve">
+    <value>ExitOnLoadErrors</value>
+    <comment>The text of the exit on load errors setting.</comment>
+  </data>
+  <data name="PerformanceLogging" xml:space="preserve">
+    <value>PerformanceLogging</value>
+    <comment>The text of the "PerformanceLogging" global setting.</comment>
+  </data>
+</root>

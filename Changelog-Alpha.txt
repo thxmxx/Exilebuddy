@@ -1,0 +1,151 @@
+﻿Forum Thread: https://www.thebuddyforum.com/threads/exilebuddy-release-thread-3-3.419393/
+
+[103]
+* Updates for 3.3.0.5
+* Updates for 3.3.0.4
+* Updates for 3.3.0.3
+* Updates for 3.3.0.2
+* Updates for 3.3.0.1
+
+* A simple Incursion plugin has been added. It will be improved over the league.
+** If you are using custom item filters, you'll need to add the Stone of Passage.
+*** "Metadata/Items/Incursion/IncursionKey" / "Stone of Passage" / IncursionItem
+
+* AtlasUi.MaxSextants added. The AtlasUi must be opened to obtain this value.
+
+* DatWorldAreaWrapper.IsTempleOfAtzoatl added
+
+* InstanceInfo.IsIncursionMonstersKilledOverlayShowing added.
+
+* InstanceInfo.AlwaysAttackWithoutMovingFlags added to expose the bit array (0-based indices) of attack in place flags for skill slots
+
+* SkillBarHud.IsSlotAlwaysAttackingWithoutMoving added to get the flag of a slot
+* SkillBarHud.SetAlwaysAttackWithoutMoving added to be able to change the flag per slot.
+
+* A new AutoLoginEx plugin has been included in Default. This plugin will replace the legacy AutoLogin in the future.
+** It is currently disabled by default as to not brick everyone's settings.
+** Please disable "AutoLogin" if you wish to use "AutoLoginEx", as two auto-login plugins running at the same time is not a good idea.
+
+* InstanceInfo.Incursion API added:
+
+** Dat.IncursionRooms added. NOTE: This data is only loaded in the client once the TempleOfAtzoatlUi has been opened at least once, so users need to open the UI before using this API.
+*** Id - the id of the room
+*** Name - the name of the room
+*** AreaId - the room area id
+*** Description - description of what the room does
+*** Lore - lore text
+*** Tier - the room's tier
+*** UpgradedRoom - A DatIncursionRoomsWrapper of what the room is upgraded into or null
+*** IncursionArchitect - A DatIncursionArchitectWrapper of the architect or null
+
+** Dat.IncursionArchitect added.
+*** Name - the name of the architect
+*** Metadata - the metadata of the architect
+*** MonsterId - the monster id of the architect
+** HasTemple returns a bool to see if Incursion data is present.
+
+** EntranceRoom, ApexRoom, Room1..Room11 return a DatIncursionRoomsWrapper to be able to access the room data of your current Temple. Rooms are numbered from left to right, bottom to top.
+** CurrentIncursionRoomId returns an int of the id of the current Incursion room.
+** CurrentIncursionRoom returns a DatIncursionRoomsWrapper for the current Incursion room.
+** IncursionsRemaining returns an int of the number of incursions remaining.
+** IncursionArchitect1/IncursionArchitect2 return a DatIncursionArchitectWrapper to expose the Incursion Architects for the current Incursion room.
+** IncursionArchitect1Room/IncursionArchitect2Room return a DatIncursionRoomsWrapper to expose the Incursion room associated with the architects.
+
+* InGameState.TempleOfAtzoatlUi added
+** EnterIncursion / OpenTemple can be used to click the buttons on this UI.
+
+* InGameState.CorruptionAltarUi added
+** WindowControl to work with the window
+** Inventory to work with the inventory
+** HasItem to know if there's an item to use
+** Pickup to pickup the item to the cursor to apply it to another item.
+
+* InGameState.TableOfSacrificeUi added
+** WindowControl to work with the window
+** InventoryControl to work with the inventory
+** Activate can be used to click the activate button
+
+* InGameState.LapidaryLensUi added
+** WindowControl to work with the window
+** Inventory to work with the inventory
+** HasItem to know if there's an item to use
+** Pickup to pickup the item to the cursor to apply it to another item.
+
+* ExilePather.BlockLockedTempleDoors added to be able to auto-block locked doors in the Temple.
+* ExilePather Ascendancy Door checking logic updated to only run in Labyrinth Trial Areas rather than all areas.
+
+* Added the 'global_override' parameter. This allows users to specify a new filename for "GlobalSettings.json" to avoid conflicts when running multiple bots from the same folder.
+* Settings window updated to include "-> Manager <-" tabs to be able to change the current Bot/Routine from the Settings window.
+* LokiPoe.Input.Binding.throw_net has been removed.
+* LokiPoe.Input.Binding.generic_league_key has been added.
+
+* Help/CommandLineArguments.txt has been added to explain the commandline arguments Exilebuddy supports.
+* Help/ApplicationExitCodes.cs is now included
+
+[92]
+* Updates for 3.2.4.5
+* PreGameState.IsRealmRestartingMessageShown and PreGameState.RealmRestartingMessage added.
+
+[91]
+* Updates for 3.2.4.4
+
+[90]
+* Updates for 3.2.4.3
+* SelectCharacter update to try and handle a new client bug.
+
+[89]
+* Additional minor updates to catch out of memory issues inside the pathfinding library/wrapper.
+* More internal pathfinding updates.
+[MapBot]
+- Added sextanting and zana mods support
+
+[88]
+* Updates for 3.2.4.2
+
+[87]
+(This update is for the new game patch + API updates from Beta/Release)
+* Updates for 3.2.4.1
+
+* Skill.Supports added. This returns a list of DatGrantedEffectsPerLevelWrapper of the supports this skill has.
+* Skill.LinkedGems updated to only display the gems that support the skill. Before, all linked support gems were returned. Duplicate supports are not handled yet.
+
+* Item.IsElderShaped added.
+* Item.MapTier now handles IsElderShaped maps.
+
+* AtlasUi implemented:
+** GetSextantsAffectingArea added to return sextants affecting an area.
+** ApplyCursorTo will click an area's gui control. 
+*** It assumes the Atlas has not been zoomed, will not check cursor contents, and will fail if there is a left or right side ui opened. This means users need to close InventoryUi after using currency before being able to apply it.
+
+[86]
+(The purpose of this Alpha build is to test the updated internal recast library to make sure nothing breaks)
+
+* Alpha updated to Beta #1722 code branch for 3.2.3.5.
+
+* Phase 1 of RecastManaged updates - internal recast library updated.
+
+* Obsolete cleanups from Beta #1714 / Release #359 (In other words, stuff that has been marked obsolete for many, many months)
+** BotManager.CurrentBot -> BotManager.Current
+** RoutineManager.CurrentRoutine -> RoutineManager.Current
+** LokiPoe.ClickPosition, LokiPoe.ClickCenterOfPosition removed (no replacements, as they were GUI related).
+*** Use MouseManager.SetMousePos(string, int/float, int/float, bool) and then Input.PressLMB/Input.ReleaseLMB to simulate the old function.
+** Input.ClickLMB -> Input.PressLMB
+** Input.ClickRMB -> Input.PressRMB
+** Input.ClickXB1 -> Input.PressXB1
+** Input.ClickXB2 -> Input.PressXB2
+** Input.SetMousePos
+*** Use 'MouseManager.SetMousePos' outside of 'OnPreMove', or 'Input.SetMousePosRaw' if inside 'OnPreMove'.
+** 'DefaultPlayerMover' and legacy 'IPlayerMover' removed.
+** NotificationHud.HandleNotification removed. Use NotificationHud.HandleNotificationEx instead.
+** LoginState.IsEnterUnlockCodeDialogVisible -> UnlockAccountUi.IsOpened
+** 'PlayerMover' removed. Use 'PlayerMoverManager' instead.
+
+* New player mover system final changes (pre-announced stuff that couldn't be done until Alpha)
+** 'MoverManager' is now renamed to PlayerMoverManager
+** 'IMover' is now renamed to 'IPlayerMover'
+** 'ThirdPartyInstance.MoverInstances' is now renamed to 'ThirdPartyInstance.PlayerMoverInstances'
+** 'ThirdPartyInstanceWrapper.Movers' is now renamed to 'ThirdPartyInstanceWrapper.PlayerMovers'
+** 'PlayerMoverManager.Movers' is now renamed to 'PlayerMoverManager.PlayerMovers'
+** 'PlayerMoverManager.MoverEvent' has been renamed to 'PlayerMoverManager.MoverEvent'
+** 'PlayerMoverManager.OnMoverChanged' has been renamed to 'PlayerMoverManager.OnMoverChanged'
+** 'MoverChangedEventArgs' has been renamed to 'PlayerMoverChangedEventArgs'

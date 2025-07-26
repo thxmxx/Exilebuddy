@@ -1,0 +1,98 @@
+Exilebuddy CommandLine Arguments
+Last Updated: June 5, 2018
+
+Argument: log_path
+Usage: Allows users to specify a sub-folder inside the "Logs" folder for logs to allow for better organization. Argument should be a valid Windows folder name.
+Example: --log_path:MyCharName1
+
+Argument: global_override
+Usage: Allows users to specify a new "GlobalSettings.json" file to avoid conflicts with multiple bots using the same installation folder.
+Example: --global_override:MyCharName1.json
+
+Argument: pid
+Usage: Allows users to attach EB to an existing PoE process by PID
+Example: --pid:1234
+
+Argument: pname
+Usage: Allows users to attach EB to an existing PoE process by processname
+Example: --pname:POE1
+
+Argument: noautoattach
+Usage: Allows users to disable EB's autoattach feature if there's only 1 PoE process running.
+Example: --noautoattach
+
+Argument: bot
+Usage: Allows users to auto-select a bot by name rather than having to manually change it.
+Example: --bot:MyBotBase
+
+Argument: routine
+Usage: Allows users to auto-select a routine by name rather than having to manually change it.
+Example: --bot:MyRoutine
+
+Argument: mover
+Usage: Allows users to specify a PlayerMover rather than having to change it themselves.
+Example: --mover:MyMover
+
+Argument: silent
+Usage: Allows users to suppress most user-interaction required message boxes for automation.
+Example: --silent
+
+Argument: exitoncompileerrors
+Usage: Allows users to exit EB if content compile errors were detected. 
+Example: --exitoncompileerrors
+Extra: LokiPoe.ApplicationExitCode is set to ApplicationExitCodes.CompileErrors (8)
+
+Argument: exitonloaderrors
+Usage: Allows users to exit EB if content load errors were detected.
+Example: --exitonloaderrors
+Extra: LokiPoe.ApplicationExitCode is set to ApplicationExitCodes.LoadErrors (9)
+
+Argument: failwitherror
+Usage: Allows users to test their error handling logic by making the process exist with the specific error.
+Example: --failwitherror:8
+Extra: LokiPoe.ApplicationExitCode is set to the value specified.
+
+Argument: autostart
+Usage: Allows users to auto-start EB after it is fully loaded.
+Example: --autostart
+Extra: Will be canceled if LokiPoe.CancelAutoStart is set to true.
+
+Argument: autominimize
+Usage: Allows users to auto-minimize EB after it has been loaded.
+Example: --autominimize
+
+Argument: authkey
+Usage: Allows users to specify the auth key used to login to with.
+Example: --authkey:YourAuthkey
+
+Argument: autoauthlogin
+Usage: Allows users to auto-login via auth rather than having to do it manually.
+Example: --autoauthlogin
+Extra: Auto auth login will also happen if GlobalSettings.Instance.AutoAuthLogin is set to true.
+
+Argument: language
+Usage: Allows users to change the language of EB, although it's mostly in English with little support for others.
+Example: --language:en
+Extra: 'en', 'zh-cn', 'fr', 'de', 'ru', 'es', 'iv' (Invariant Culture)
+
+Argument: config
+Usage: Allows users to auto-select the configuration Exilebuddy uses for settings.
+Example: --config:MyConfig1
+Extra: This will override GlobalSettings.Instance.LastUsedConfiguration
+
+Argument: noupdate
+Usage: Allows users to disable EB update checks.
+Example: --noupdate
+
+Argument: autoupdate
+Usage: Allows users to auto-update EB.
+Example: --autoupdate
+
+Argument: HookCompatibility0
+Usage: Allows users to use an older style hook for rare cases where the modern hook does not work.
+Example: --HookCompatibility0
+
+Argument: HookCompatibilityDepth
+Usage: Allows users to specify how many bytes should be skipped to place the DX hook.
+Example: --HookCompatibilityDepth:16
+Extra: Used to be HookCompatibility1
